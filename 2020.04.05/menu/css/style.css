@@ -1,0 +1,256 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: rgb(216, 240, 247);
+    color: white;
+}
+
+@keyframes bouncing{
+    0%  { bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); }
+    100% { bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1); }
+  }
+    
+  .icon-right-open-big{ 
+   animation: bouncing 2s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
+  }
+
+
+.container {
+    background-color: rgb(247, 247, 247);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: rgb(21, 146, 109) 0 0 25 px;
+    min-height: 90vh;
+
+}
+.main-menu > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(51, 184, 128);
+    font-size: 0;
+    border: 1px solid #777;
+}
+.main-menu.st1,.main-menu.st2,.main-menu.st3,.main-menu.st4 {
+    margin-top: 150px;
+}
+
+.main-menu.st1 > ul{
+    background-color: #3F7FBF;
+    
+}
+.main-menu.st1 > ul a {
+    color: white;
+    transition: cubic-bezier(0,.49,1,.64);
+    background-color:#3f7fbf;
+    border: 3px  double rgb(67, 81, 158);
+    border-radius: 5px;
+}
+
+.main-menu.st1 > ul > li> a::after {
+    color: orange;
+    background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 70%,rgba(255,127,4,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 2px;
+    transform: translateY(-50%);
+    transition: all .2s ease-in-out;
+}
+
+.main-menu.st1 > ul > li:hover > a , 
+.main-menu.st1 > ul > li.active > a {
+        color: rgb(210, 217, 255);
+        background-color: rgb(85, 102, 202);
+    }
+.main-menu.st1 > ul > li ul a:hover {
+        background-color:rgb(67, 81, 158);
+}
+.main-menu.st2 > ul{
+    background-color: #8C728C;
+}
+
+.main-menu.st2 > ul a {
+    color: white;
+    transition: cubic-bezier(0,.49,1,.64);
+    background-color:#8C728C;
+       
+}
+.main-menu.st2 > ul > li:hover > a , 
+.main-menu.st2 > ul > li.active > a {
+        color: rgb(210, 217, 255);
+        background-color: rgb(175, 131, 175);
+        transition-duration: 1s; 
+        transition-property: background;
+}
+.main-menu.st2 > ul > li ul a:hover {
+        background-color:rgb(175, 131, 175);
+        transition-duration: 1s; 
+        transition-property: background;
+}
+
+.main-menu.st3 > ul{
+    background: linear-gradient(to bottom, rgba(30,96,154,0) 0%,rgba(30,96,154,0.8) 5%,rgba(30,96,154,0.87) 10%,rgba(30,96,154,1) 19%,rgba(30,96,154,1) 20%,rgba(42,149,216,1) 50%,rgba(30,96,154,1) 80%,rgba(30,96,154,1) 81%,rgba(30,96,154,0.8) 96%,rgba(30,96,154,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+}
+.main-menu.st3 > ul a {
+    color: white;
+    background: linear-gradient(to bottom, rgba(30,96,154,0) 0%,rgba(30,96,154,0.8) 5%,rgba(30,96,154,0.87) 10%,rgba(30,96,154,1) 19%,rgba(30,96,154,1) 20%,rgba(42,149,216,1) 50%,rgba(30,96,154,1) 80%,rgba(30,96,154,1) 81%,rgba(30,96,154,0.8) 96%,rgba(30,96,154,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: all 2s ease-in-out;
+        
+}
+.main-menu.st3 > ul > li ul a:hover {
+    background: linear-gradient(to bottom, rgba(23,134,203,0) 0%,rgba(23,134,203,0.8) 5%,rgba(23,134,203,0.87) 10%,rgba(23,134,203,1) 19%,rgba(23,134,203,1) 20%,rgba(57,180,233,1) 50%,rgba(23,134,203,1) 80%,rgba(23,134,203,1) 81%,rgba(23,134,203,0.8) 96%,rgba(23,134,203,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition-duration: 3s; 
+    transition-property: background;
+}
+
+
+.main-menu.st3 > ul > li:hover > a , 
+.main-menu.st3 > ul > li.active > a {
+        color: rgb(210, 217, 255);
+        background: linear-gradient(to bottom, rgba(23,134,203,0) 0%,rgba(23,134,203,0.8) 5%,rgba(23,134,203,0.87) 10%,rgba(23,134,203,1) 19%,rgba(23,134,203,1) 20%,rgba(57,180,233,1) 50%,rgba(23,134,203,1) 80%,rgba(23,134,203,1) 81%,rgba(23,134,203,0.8) 96%,rgba(23,134,203,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        transition-duration: 1s; 
+        transition-property: background;
+}
+
+
+.main-menu.st4 > ul{
+    background-color: black;
+}
+
+.main-menu.st4 > ul a {
+    color: white;
+    background-color:black;
+}
+
+
+
+.main-menu.st4 > ul > li:hover > a , 
+.main-menu.st4 > ul > li.active > a {
+        color: rgb(white);
+        background-color: rgb(76, 82, 92);
+        transition: 1s linear 1s;
+    }   
+
+.main-menu.st4 > ul > li ul a:hover {
+    background-color:rgb(59, 70, 90);
+    
+}
+
+
+
+
+
+
+
+.main-menu > ul a {
+    display: block;
+    top: 1px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: 300ms ease;
+    background-color: rgb(51, 184, 128);
+    border: 1px solid #777;
+}
+.main-menu > ul > li{
+    display: inline-block;
+    position: relative;
+    
+}
+.main-menu > ul > li> a {
+    display: block;
+    padding: 25px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(230, 255, 239);
+    font-size: 15px;
+    transition: 300ms ease;
+
+}
+.main-menu > ul > li:hover > a , 
+.main-menu > ul > li.active > a {
+        color: rgb(192, 248, 213);
+        background-color: rgb(18, 129, 92);
+    }
+
+.main-menu > ul > li> a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: 0;
+    height: 1px;
+    background-color: rgb(247, 252, 249);
+    left: 25px;
+    right: 25px;
+    bottom: 10px;
+    transform-origin: 0 0;
+    /*width: calc(100%-50px);*/
+    transform: scaleX(0);
+    transition: .3s linear;
+    
+}
+.main-menu > ul > li:hover > a::after, 
+.main-menu > ul > li.active > a::after {
+    opacity: 1;
+    transform: scaleX(1);
+    
+}
+
+.main-menu > ul > li ul {
+    position: absolute;  
+    border-radius: 2px;
+    top: calc(100% - 15px);
+    padding: 10px 0;
+    min-width: 100%;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    transform-origin: 50% 25px;
+
+}
+
+.main-menu ul.parent::after {
+    content: '\e804';
+    display: block;
+    position: absolute;
+    height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(45, 216, 193);
+}
+
+.main-menu > ul > li ul a {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: left;
+    white-space: nowrap;
+}                            
+                            
+.main-menu > ul > li ul a:hover {
+    background-color:rgb(30, 233, 148);
+}
+.main-menu  li:hover > ul {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1, 1);
+}
+
+
+.main-menu li ul li ul{
+         left:100%;
+         top: 0;
+}    
+
+.main.menu li ul li ul li{
+    display: none;
+}
+
+.main-menu li ul li:hover ul li{
+    display: block;
+}
+
+.main-menu ul.parent {
+    margin-top: 5px;
+}
+
+
+
+
+

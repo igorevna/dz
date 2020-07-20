@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    background-color: #dddedf;
+    color: #567;
+}
+
+.block {
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #3569a5;
+    color: #fff;
+    margin: 5px 0;
+}
+

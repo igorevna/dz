@@ -1,0 +1,97 @@
+.container{
+    width: 1600px;
+    height: 800px;
+    background: rgb(132, 173, 250);
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}   
+
+header, nav, footer {
+    color: #fff;
+    /*padding: 15px;*/
+    box-sizing: border-box;
+    font-size: 20pt;
+}
+header {
+    
+    height: 70px;
+}
+
+
+nav{
+    height: 100px;
+
+}
+body {
+    margin: 0;;
+}
+
+section{
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 250px;
+    background-position: center;
+    cursor: pointer;
+    margin: 40px;
+    align-items: center;
+    max-width: 100%;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20pt;
+    background-size: contain;
+    background-attachment: scroll;
+    
+           
+}
+a {
+    font-size: large;
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    
+}
+
+
+
+
+main{
+    display: flex;
+    flex-grow: 1;
+}
+
+main aside, section{
+    flex-basis: 50% ;
+}
+
+section:hover,
+section.active  {
+    transition-property: background;
+    background-size: contain;
+    transform: scale(1.1);
+    transition: all 1s linear;
+}
+.section1:hover,
+.section1.active  {
+    background-image: url(../images/background1.png);
+    }
+
+.section2:hover,
+.section2.active  {
+    background-image: url(../images/background2.png);
+    
+}
+
+.section1 {
+    background-image: url(../images/background1.png);
+    
+    }
+
+.section2 {
+    background-image: url(../images/background2.png);
+}

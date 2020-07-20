@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f1f2f3;
+        }
+        .container {
+            max-width: 500px;
+            margin: 15px auto;
+        }
+
+        #my-canvas {
+            background-color: #fff;
+            box-shadow: rgba(0,0,0,.3) 0 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <canvas id="my-canvas" width="500" height="500"></canvas>
+    </div>
+
+    <script>
+
+        const canvas = document.querySelector('#my-canvas')
+        const ctx = canvas.getContext('2d')
+
+        const radius = canvas.width*.45
+
+        ctx.fillStyle = "#ddd"
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        
+        ctx.translate(canvas.width/2, canvas.height/2)
+        
+        setInterval(drawClock, 500)
+
+        function drawClock() {
+            ctx.fillStyle = "#ddd"
+            ctx.fillRect(-canvas.width/2, -canvas.height/2, canvas.width, canvas.height)
+            drawFace(radius)
+            drawNumbers(radius)
+            drawHands(radius)
+        }
+
+        function drawFace(r) {
+            ctx.beginPath()
+            ctx.arc(0,0, r, 0, 2 * Math.PI)
+            ctx.fillStyle = "#fff"
+            ctx.fill()
+
+            const grad = ctx.createRadialGradient(0, 0, r*.95, 0, 0, r*1.01)
+            grad.addColorStop(0, '#777')
+            grad.addColorStop(.6, '#aaa')
+            grad.addColorStop(1, '#888')
+            ctx.strokeStyle = grad
+            ctx.lineWidth = r*.1
+            ctx.stroke()
+
+            ctx.beginPath()
+            ctx.arc(0,0, r*.07, 0, 2 * Math.PI)
+            ctx.fillStyle = '#777'
+            ctx.fill()
+        }
+
+
+        function drawNumbers(r) {
+            ctx.font = `bold ${r*.15}px Arial`
+            ctx.textBaseline = 'middle'
+            ctx.textAlign = 'center'
+            ctx.fillStyle = '#999'
+            for(let n = 1; n < 13; n++) {
+                let angle = n * Math.PI / 6
+                ctx.rotate(angle)
+                ctx.translate(0, -r*.85)
+                ctx.rotate(-angle)
+                ctx.fillText(n, 0, 0)
+                ctx.rotate(angle)
+                ctx.translate(0, r*.85)
+                ctx.rotate(-angle)
+            }
+        }
+
+        function drawHands(r) {
+
+            let now = new Date()
+            let h = now.getHours()%12
+            let m = now.getMinutes()
+            let s = now.getSeconds()
+
+            let sAngle = rad(s*6)
+            drawHand(sAngle, r*.9, r*.01)
+
+            let mAngle = rad(m*6 + s*.1)
+            drawHand(mAngle, r*.7, r*.025)
+
+            let hAngle = rad(h*30 + m*.5 + s*(1/120))
+            drawHand(hAngle, r*.5, r*.04)
+        }
+
+        function drawHand(angle, length, width) {
+            ctx.beginPath()
+            ctx.strokeStyle= '#EE6C4D'
+            ctx.lineWidth = width
+            ctx.lineCap = 'round'
+            ctx.moveTo(0,0)
+            ctx.rotate(angle)
+            ctx.lineTo(0, -length)
+            ctx.stroke()
+            ctx.rotate(-angle)
+        }
+
+        function rad(deg) {
+            return deg*Math.PI/180
+        }
+    </script>
+
+</body>
+</html>

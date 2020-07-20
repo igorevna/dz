@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    
+}
+
+.col-8, .col-4, .col-3 {
+    box-sizing: border-box;
+    padding: 15px;
+    background: -webkit-linear-gradient(top, rgba(222,237,189,1) 0%,rgba(184,214,162,1) 44%,rgba(114,202,110,1) 100%); /* Chrome10-25,Safari5.1-6 */;
+    color: black;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: 3px solid black;
+    
+}
+img {
+    width: 100%;
+}
+
+.col-4:hover, .col-3:hover .col-4.active, .col-3.active  {
+    cursor: pointer;
+    transition-duration: 2s; 
+    transition-property: background;
+    background: -webkit-linear-gradient(top, rgb(7, 170, 135) 0%,rgba(184,214,162,1) 44%,rgba(114,202,110,1) 100%);
+    
+}
+
+
+

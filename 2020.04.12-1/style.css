@@ -1,0 +1,105 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f1f2;
+    color: #567;
+}
+.container {
+    max-width: 900px;
+    overflow: auto;
+    box-sizing: border-box;
+    box-shadow: rgba(0,0,0,.2) 0 5px 15px;
+    background-color: #fff;
+    margin: 15px auto;
+    display: flex;
+    border: 2px solid #1c1a19 ;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.container .column {
+    flex-basis: 50%;
+    box-sizing: border-box;
+ 
+}
+label {
+    display: block;
+    padding-right:20px ;
+    padding-left: 20px;
+}
+img{
+    width: 500px;
+    height: 697px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    background-size: contain;
+}
+.form-field{
+    font-family: 'Open Sans', sans-serif;
+    color: #f0edf1;
+    padding: 0;
+    max-width: 400px;
+    height: 90px;
+    background-color: #1c1a19;
+    transition: 200ms ease;
+}
+button {
+    background-color:#e33228;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    border: 2px solid #e33228;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button{
+    background-color: #1c1a19;
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+h2, h3{
+    text-align: center;
+    margin: 0;
+}
+.button1{
+    background-color: #1c1a19;
+    width: 100%;
+    text-align: center;
+    height: 59px;
+                
+}
+a{
+    font-size: 15px;
+    font-style: normal;
+    color: #fff; 
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    
+}
+        
+.input-field{
+    font-size: 16px;
+    margin: 20 auto;
+    width: 100px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid;
+    color: #fff;
+    background-color: #1c1a19;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    
+    
+}
+.input-field:focus {
+    
+    border: 3px solid #7a022a;
+    
+    
+}
+        
+button:focus{
+    background-color: rgba(0,0,0,.2)
+}
+        
