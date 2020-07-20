@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="chart1"></div>
+    
+    <script src="chart.js"></script>
+    <script>
+        const chartData = {
+            "2018": {
+                "React JS": 315174,
+                "Vue JS": 201930,
+                "Angular Core/CLI": 153000
+    },
+            "2019": {
+                "React JS": 335174,
+                "Vue JS": 251930,
+                "Angular Core/CLI": 173000
+    },
+            "2020": {
+                "React JS": 385174,
+                "Vue JS": 291930,
+                "Angular Core/CLI": 123000
+    },
+}
+        let myChart = new Piechart({
+            elementId: 'chart1',
+            width: 900,
+            height: 600,
+            colors: ['#0096c7', '#EE6C4D', '#2ec4b6'],
+            background: '#eee',
+            data: chartData
+        })
+        myChart.draw()
+        
+        
+        
+        
+        
+        
+        
+        
+       // myChart.draw()
+
+    </script>
+
+</body>
+</html>
